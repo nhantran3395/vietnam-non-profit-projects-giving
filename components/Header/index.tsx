@@ -1,14 +1,18 @@
 import React from 'react';
 import { Pane, Heading } from 'evergreen-ui';
+import NavBar from '../Navbar';
 
 const Header = () => {
   return (
     <Pane
-      width="100%"
+      width="80%"
       display="flex"
       alignItems="center"
-      justifyContent="center">
-      <Heading size={900}>Header</Heading>
+      justifyContent="space-between">
+      <Pane>
+        <Heading size={900}>Vietnam Giving</Heading>
+      </Pane>
+      <NavBar />
     </Pane>
   );
 };

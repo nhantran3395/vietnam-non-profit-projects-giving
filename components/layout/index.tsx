@@ -1,7 +1,7 @@
 import React from 'react';
 import { IPropsChildren } from './interfaces';
 import { Pane } from 'evergreen-ui';
-import Header from '../header/header';
+import Header from '../Header';
 
 const Layout = ({ children }: IPropsChildren) => {
   return (
