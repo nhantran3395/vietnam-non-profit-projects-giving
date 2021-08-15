@@ -1,6 +1,8 @@
 import React from 'react';
-import { Pane, Heading } from 'evergreen-ui';
+import NextLink from 'next/link';
+import { Pane, Heading, Link } from 'evergreen-ui';
 import NavBar from '../Navbar';
+import AppLogo from '../AppLogo';
 
 const Header = () => {
   return (
@@ -9,9 +11,17 @@ const Header = () => {
       display="flex"
       alignItems="center"
       justifyContent="space-between">
-      <Pane>
-        <Heading size={900}>Vietnam Giving</Heading>
-      </Pane>
+      <NextLink href="/">
+        <Link
+          display="flex"
+          flexDirection="row"
+          alignItems="center"
+          justifyContent="space-between"
+          cursor="pointer">
+          <Heading size={900}>Vietnam Giving</Heading>
+          <AppLogo />
+        </Link>
+      </NextLink>
       <NavBar />
     </Pane>
   );
