@@ -7,7 +7,7 @@ const requestOptions = {
   },
 };
 
-const vietnamActiveProjectsUrl = `https://api.globalgiving.org/api/public/projectservice/countries/VN/projects/active?api_key=${process.env.globalGivingApiKey}`;
+const vietnamActiveProjectsUrl = `https://api.globalgiving.org/api/public/projectservice/countries/VN/projects/active?api_key=${process.env.NEXT_PUBLIC_GLOBAL_GIVING_API_KEY}`;
 
 const isStatusAbnormal = (res: Response) => {
   return !res.ok;
