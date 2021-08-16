@@ -9,11 +9,11 @@ const requestOptions = {
 
 const vietnamActiveProjectsUrl = `https://api.globalgiving.org/api/public/projectservice/countries/VN/projects/active?api_key=${process.env.globalGivingApiKey}`;
 
-const isStatusAbnormal = (res) => {
+const isStatusAbnormal = (res: Response) => {
   return !res.ok;
 };
 
-const checkResponseStatus = (res) => {
+const checkResponseStatus = (res: Response) => {
   if (isStatusAbnormal(res)) {
     throw new RequestFailedError(`Request failed: ${res.statusText}`);
   }
