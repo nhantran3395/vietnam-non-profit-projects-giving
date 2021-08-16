@@ -1,5 +1,5 @@
 import React from 'react';
 
-export interface IPropsChildren {
+export interface ILayoutProps {
   children: React.ReactNode;
 }

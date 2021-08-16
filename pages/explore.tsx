@@ -1,9 +1,28 @@
+import React, { useState, useEffect } from 'react';
 import type { NextPage } from 'next';
 import Head from 'next/head';
 import { Pane, Heading } from 'evergreen-ui';
 import Layout from '../components/Layout';
+import ProjectService from '../services/projects';
+import { IProject } from '../services/projects/interfaces';
+import ProjectCard from '../components/ProjectCard';
 
 const Home: NextPage = () => {
+  const [projects, setProjects] = useState<IProject[]>([]);
+
+  useEffect(() => {
+    const fetchActiveProjects = async () => {
+      try {
+        const data = await ProjectService.getAllActiveProjects();
+        setProjects(data);
+      } catch (error) {
+        console.log(error);
+      }
+    };
+
+    fetchActiveProjects();
+  }, []);
+
   return (
     <Layout>
       <Head>
@@ -12,8 +31,16 @@ const Home: NextPage = () => {
         <link rel="icon" href="/vietnam.svg" />
       </Head>
 
-      <Pane display="flex" alignItems="center" justifyContent="center">
+      <Pane
+        display="flex"
+        alignItems="center"
+        justifyContent="center"
+        flexDirection="column">
         <Heading size={900}>Explore</Heading>
+
+        {projects.map((project) => (
+          <ProjectCard key="project.title" project={project} />
+        ))}
       </Pane>
     </Layout>
   );

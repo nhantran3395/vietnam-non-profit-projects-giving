@@ -1,9 +1,9 @@
 import React from 'react';
-import { IPropsChildren } from './interfaces';
+import { ILayoutProps } from './interfaces';
 import { Pane } from 'evergreen-ui';
 import Header from '../Header';
 
-const Layout = ({ children }: IPropsChildren) => {
+const Layout = ({ children }: ILayoutProps) => {
   return (
     <Pane
       width="100%"
