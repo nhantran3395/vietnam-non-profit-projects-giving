@@ -2,10 +2,10 @@ import React, { useState, useEffect } from 'react';
 import type { NextPage } from 'next';
 import Head from 'next/head';
 import { Pane, Heading } from 'evergreen-ui';
-import Layout from '../components/layout';
 import ProjectService from '../services/projects';
 import { IProject } from '../services/projects/interfaces';
-import ProjectCard from '../components/projectCard';
+import Layout from '../components/Layout';
+import ProjectCard from '../components/ProjectCard';
 
 const Home: NextPage = () => {
   const [projects, setProjects] = useState<IProject[]>([]);
