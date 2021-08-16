@@ -2,6 +2,6 @@
 module.exports = {
   reactStrictMode: true,
   env: {
-    globalGivingApiKey: 'api-key',
+    globalGivingApiKey: 'api_key',
   },
 };
