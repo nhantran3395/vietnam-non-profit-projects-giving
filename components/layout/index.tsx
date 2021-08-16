@@ -1,7 +1,7 @@
 import React from 'react';
 import { ILayoutProps } from './interfaces';
 import { Pane } from 'evergreen-ui';
-import Header from '../Header';
+import Header from '../header';
 
 const Layout = ({ children }: ILayoutProps) => {
   return (

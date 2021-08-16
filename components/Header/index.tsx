@@ -1,8 +1,8 @@
 import React from 'react';
 import NextLink from 'next/link';
 import { Pane, Heading, Link } from 'evergreen-ui';
-import NavBar from '../Navbar';
-import AppLogo from '../AppLogo';
+import NavBar from '../navbar';
+import AppLogo from '../appLogo';
 
 const Header = () => {
   return (
