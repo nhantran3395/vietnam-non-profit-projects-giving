@@ -6,7 +6,7 @@ const AppLogo = () => {
     <Pane marginX={16}>
       <svg
         id="Capa_1"
-        enable-background="new 0 0 512 512"
+        enableBackground="new 0 0 512 512"
         height="48"
         viewBox="0 0 512 512"
         width="48"
