@@ -1,7 +1,7 @@
 import type { NextPage } from 'next';
 import Head from 'next/head';
 import { Pane, Heading } from 'evergreen-ui';
-import Layout from '../components/layout';
+import Layout from '../components/AppLayout';
 
 const Home: NextPage = () => {
   return (

@@ -4,7 +4,7 @@ import Head from 'next/head';
 import { Pane, Heading } from 'evergreen-ui';
 import ProjectService from '../services/projects';
 import { IProject } from '../services/projects/interfaces';
-import Layout from '../components/layout';
+import Layout from '../components/AppLayout';
 import ProjectCard from '../components/ProjectCard';
 
 const Home: NextPage = () => {
